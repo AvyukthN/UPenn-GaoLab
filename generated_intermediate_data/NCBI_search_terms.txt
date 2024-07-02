@@ -1,0 +1,5 @@
+tpo[PCSK9] human[GRCh38] - get transcript sequence from gene_id
+	- tpo[gene_id] human[org]
+
+gene_id - https://www.ncbi.nlm.nih.gov/gene/?term=ENSG00000169174
+	- gets the exact gene from gene_id 

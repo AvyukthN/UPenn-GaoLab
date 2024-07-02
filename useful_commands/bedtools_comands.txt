@@ -1,0 +1,2 @@
+bedtools getfasta -fi fasta_data/hg38.fa -bed bed_data/TruSight_Cancer_TargetedRegions_v1.0.hg38.bed -fo *INSERT OUT FILE NAME"
+	- takes input bed file and input fasta file and makes text file with all sections of fasta file that bed file specified

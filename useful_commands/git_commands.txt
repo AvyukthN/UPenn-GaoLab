@@ -1,0 +1,1 @@
+git rm -r --cached fasta_data/hg38.fa

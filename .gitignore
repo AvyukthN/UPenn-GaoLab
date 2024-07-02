@@ -1,0 +1,12 @@
+*.bed
+!spec/*.bed
+*.Rda
+!spec/*.Rda
+*.vcf
+!spec/*.vcf
+*.csv
+!spec/*.csv
+*.fa
+!spec/*.fa
+*.tsv
+!spec/*.tsv
