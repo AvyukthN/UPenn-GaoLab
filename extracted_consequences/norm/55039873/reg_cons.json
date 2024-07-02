@@ -1,1 +1,1 @@
-"[{\"consequence_terms\": [\"regulatory_region_variant\"], \"biotype\": \"promoter\", \"variant_allele\": \"T\", \"impact\": \"MODIFIER\", \"regulatory_feature_id\": \"ENSR00001299574\"}]"
+"[{\"impact\": \"MODIFIER\", \"consequence_terms\": [\"regulatory_region_variant\"], \"regulatory_feature_id\": \"ENSR00001299574\", \"variant_allele\": \"T\", \"biotype\": \"promoter\"}]"

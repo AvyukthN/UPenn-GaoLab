@@ -2,6 +2,7 @@ import requests, sys
 import pandas as pd
 from tqdm import tqdm
 import json
+import os
 
 def process_VEP_test(filename: str) -> list:
 	with open(filename, 'r') as f:
@@ -25,15 +26,15 @@ def process_variant_array(arr: list) -> str:
 
 	return arr_str
 
-def get_response_data(): 
+def get_response_data(params: list, extract_folder: str): 
 	server = "https://rest.ensembl.org"
 	ext = "/vep/homo_sapiens/region"
 	headers={ "Content-Type" : "application/json", "Accept" : "application/json"}
 
 
-	param_args = (list(sys.argv))[3:]
+	param_args = params[4:]
 
-	variant_arr = process_VEP_test(sys.argv[1])
+	variant_arr = process_VEP_test(params[1])
 	# print(variant_arr)
 
 	dict_data = {"variants": variant_arr}
@@ -51,8 +52,8 @@ def get_response_data():
 	decoded = r.json()
 
 	# print(decoded)
-
-	with open(sys.argv[2], 'w') as f:
+	os.system(f"mkdir ./extracted_consequences/{extract_folder}/")
+	with open(f'./extracted_consequences/{extract_folder}/{params[2]}', 'w') as f:
 		json.dump(decoded, f)
 		# f.write(str(decoded))
 	# print(repr(decoded))

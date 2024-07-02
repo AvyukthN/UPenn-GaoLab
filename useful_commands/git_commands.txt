@@ -1,1 +1,6 @@
 git rm -r --cached fasta_data/hg38.fa
+
+TO REMOVE FILE ACCIDENTIALLY PUSHED
+git rm -r *file accidentally pushed"
+git commit -m "*commit message*"
+git push origin master
