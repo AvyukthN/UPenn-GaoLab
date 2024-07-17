@@ -1,0 +1,1 @@
+"[{\"hgnc_id\": \"HGNC:20001\", \"variant_allele\": \"A\", \"biotype\": \"protein_coding\", \"gene_symbol_source\": \"HGNC\", \"canonical\": 1, \"gene_symbol\": \"PCSK9\", \"transcript_id\": \"ENST00000302118\", \"strand\": 1, \"gene_id\": \"ENSG00000169174\", \"impact\": \"MODIFIER\", \"consequence_terms\": [\"intron_variant\"]}]"

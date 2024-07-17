@@ -1,0 +1,1 @@
+"[{\"hgnc_id\": \"HGNC:20001\", \"biotype\": \"protein_coding\", \"variant_allele\": \"T\", \"cdna_end\": 256, \"canonical\": 1, \"gene_symbol_source\": \"HGNC\", \"gene_symbol\": \"PCSK9\", \"transcript_id\": \"ENST00000302118\", \"impact\": \"MODIFIER\", \"gene_id\": \"ENSG00000169174\", \"strand\": 1, \"consequence_terms\": [\"5_prime_UTR_variant\"], \"cdna_start\": 256}]"

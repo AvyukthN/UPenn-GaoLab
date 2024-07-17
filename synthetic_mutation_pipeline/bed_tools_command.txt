@@ -1,0 +1,3 @@
+bedtools getfasta -fi {fasta_fp} -bed {bfile_fp} -fo {extraction_dir}/{extraction_fname}.txt
+
+bedtools getfasta -fi ./fasta_data/hg38.fa -bed ./bed_data/BRCA2_hg38.bed -fo ./synthetic_mutation_pipeline/BRCA2_hg38_extracted.txt
