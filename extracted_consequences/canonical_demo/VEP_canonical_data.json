@@ -1,1 +1,383 @@
-[{"seq_region_name": "1", "end": 55039803, "transcript_consequences": [{"hgnc_id": "HGNC:20001", "biotype": "protein_coding", "variant_allele": "T", "cdna_end": 256, "canonical": 1, "gene_symbol_source": "HGNC", "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118", "impact": "MODIFIER", "gene_id": "ENSG00000169174", "strand": 1, "consequence_terms": ["5_prime_UTR_variant"], "cdna_start": 256}], "input": "1 55039803 55039804 C T . . .", "assembly_name": "GRCh38", "start": 55039803, "allele_string": "C/T", "most_severe_consequence": "missense_variant", "strand": 1, "id": "55039804"}, {"colocated_variants": [{"id": "COSV56161093", "seq_region_name": "1", "phenotype_or_disease": 1, "somatic": 1, "strand": 1, "start": 55039838, "allele_string": "COSMIC_MUTATION", "var_synonyms": {"COSMIC": ["COSM6420513"]}, "end": 55039838}], "seq_region_name": "1", "end": 55039838, "assembly_name": "GRCh38", "input": "1 55039838 55039839 T G . . .", "start": 55039838, "transcript_consequences": [{"canonical": 1, "hgnc_id": "HGNC:20001", "gene_id": "ENSG00000169174", "protein_end": 1, "cds_end": 1, "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118", "cdna_end": 291, "polyphen_score": 0.069, "gene_symbol_source": "HGNC", "sift_score": 0, "biotype": "protein_coding", "variant_allele": "G", "polyphen_prediction": "benign", "cds_start": 1, "amino_acids": "L/V", "consequence_terms": ["start_lost"], "cdna_start": 291, "impact": "HIGH", "codons": "Ttg/Gtg", "strand": 1, "sift_prediction": "deleterious_low_confidence", "protein_start": 1}], "regulatory_feature_consequences": [{"consequence_terms": ["regulatory_region_variant"], "impact": "MODIFIER", "variant_allele": "G", "regulatory_feature_id": "ENSR00001299574", "biotype": "promoter"}], "allele_string": "T/G", "id": "55039839", "strand": 1, "most_severe_consequence": "start_lost"}, {"seq_region_name": "1", "end": 55039872, "transcript_consequences": [{"sift_prediction": "tolerated", "protein_start": 12, "polyphen_prediction": "benign", "cds_start": 35, "amino_acids": "R/L", "consequence_terms": ["missense_variant"], "cdna_start": 325, "impact": "MODERATE", "codons": "cGg/cTg", "strand": 1, "sift_score": 0.76, "variant_allele": "T", "biotype": "protein_coding", "polyphen_score": 0, "cdna_end": 325, "gene_symbol_source": "HGNC", "cds_end": 35, "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118", "protein_end": 12, "gene_id": "ENSG00000169174", "hgnc_id": "HGNC:20001", "canonical": 1}], "regulatory_feature_consequences": [{"consequence_terms": ["regulatory_region_variant"], "impact": "MODIFIER", "biotype": "promoter", "regulatory_feature_id": "ENSR00001299574", "variant_allele": "T"}], "start": 55039872, "input": "1 55039872 55039873 G T . . .", "assembly_name": "GRCh38", "allele_string": "G/T", "most_severe_consequence": "missense_variant", "strand": 1, "id": "55039873"}, {"end": 55039901, "input": "1 55039901 55039902 T C . . .", "assembly_name": "GRCh38", "start": 55039901, "regulatory_feature_consequences": [{"impact": "MODIFIER", "consequence_terms": ["regulatory_region_variant"], "variant_allele": "C", "regulatory_feature_id": "ENSR00001299574", "biotype": "promoter"}], "transcript_consequences": [{"cds_start": 64, "amino_acids": "F/L", "cdna_start": 354, "consequence_terms": ["missense_variant"], "impact": "MODERATE", "codons": "Ttc/Ctc", "strand": 1, "protein_start": 22, "cdna_end": 354, "gene_symbol_source": "HGNC", "variant_allele": "C", "biotype": "protein_coding", "protein_end": 22, "gene_id": "ENSG00000169174", "cds_end": 64, "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118", "canonical": 1, "hgnc_id": "HGNC:20001"}], "seq_region_name": "1", "id": "55039902", "strand": 1, "most_severe_consequence": "missense_variant", "allele_string": "T/C"}, {"allele_string": "C/G", "id": "55039926", "strand": 1, "most_severe_consequence": "missense_variant", "seq_region_name": "1", "assembly_name": "GRCh38", "input": "1 55039925 55039926 C G . . .", "start": 55039925, "transcript_consequences": [{"amino_acids": "P/A", "cds_start": 88, "codons": "Ccg/Gcg", "impact": "MODERATE", "strand": 1, "cdna_start": 378, "consequence_terms": ["missense_variant"], "protein_start": 30, "cdna_end": 378, "gene_symbol_source": "HGNC", "biotype": "protein_coding", "variant_allele": "G", "gene_id": "ENSG00000169174", "protein_end": 30, "gene_symbol": "PCSK9", "cds_end": 88, "transcript_id": "ENST00000302118", "canonical": 1, "hgnc_id": "HGNC:20001"}], "regulatory_feature_consequences": [{"variant_allele": "G", "regulatory_feature_id": "ENSR00001299574", "biotype": "promoter", "impact": "MODIFIER", "consequence_terms": ["regulatory_region_variant"]}], "end": 55039925}, {"allele_string": "C/A", "id": "55040085", "strand": 1, "most_severe_consequence": "intron_variant", "seq_region_name": "1", "start": 55040084, "input": "1 55040084 55040085 C A . . .", "assembly_name": "GRCh38", "transcript_consequences": [{"hgnc_id": "HGNC:20001", "variant_allele": "A", "biotype": "protein_coding", "gene_symbol_source": "HGNC", "canonical": 1, "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118", "strand": 1, "gene_id": "ENSG00000169174", "impact": "MODIFIER", "consequence_terms": ["intron_variant"]}], "regulatory_feature_consequences": [{"regulatory_feature_id": "ENSR00001299574", "variant_allele": "A", "biotype": "promoter", "consequence_terms": ["regulatory_region_variant"], "impact": "MODIFIER"}], "end": 55040084}, {"allele_string": "C/T", "strand": 1, "most_severe_consequence": "synonymous_variant", "id": "55063570", "seq_region_name": "1", "transcript_consequences": [{"strand": -1, "gene_id": "ENSG00000162402", "impact": "MODIFIER", "consequence_terms": ["downstream_gene_variant"], "gene_symbol": "USP24", "transcript_id": "ENST00000294383", "gene_symbol_source": "HGNC", "canonical": 1, "distance": 2790, "hgnc_id": "HGNC:12623", "variant_allele": "T", "biotype": "protein_coding"}, {"hgnc_id": "HGNC:20001", "canonical": 1, "gene_symbol": "PCSK9", "cds_end": 2064, "transcript_id": "ENST00000302118", "protein_end": 688, "gene_id": "ENSG00000169174", "variant_allele": "T", "biotype": "protein_coding", "cdna_end": 2354, "gene_symbol_source": "HGNC", "protein_start": 688, "cds_start": 2064, "amino_acids": "S", "cdna_start": 2354, "consequence_terms": ["synonymous_variant"], "codons": "tcC/tcT", "strand": 1, "impact": "LOW"}], "regulatory_feature_consequences": [{"biotype": "enhancer", "regulatory_feature_id": "ENSR00000358271", "variant_allele": "T", "consequence_terms": ["regulatory_region_variant"], "impact": "MODIFIER"}], "start": 55063569, "input": "1 55063569 55063570 C T . . .", "assembly_name": "GRCh38", "end": 55063569}, {"end": 55063581, "transcript_consequences": [{"transcript_id": "ENST00000294383", "gene_symbol": "USP24", "gene_id": "ENSG00000162402", "strand": -1, "impact": "MODIFIER", "consequence_terms": ["downstream_gene_variant"], "variant_allele": "G", "biotype": "protein_coding", "hgnc_id": "HGNC:12623", "canonical": 1, "gene_symbol_source": "HGNC", "distance": 2778}, {"gene_id": "ENSG00000169174", "protein_end": 692, "gene_symbol": "PCSK9", "cds_end": 2076, "transcript_id": "ENST00000302118", "canonical": 1, "hgnc_id": "HGNC:20001", "cds_start": 2076, "amino_acids": "H/Q", "cdna_start": 2366, "consequence_terms": ["missense_variant"], "codons": "caT/caG", "strand": 1, "impact": "MODERATE", "protein_start": 692, "cdna_end": 2366, "gene_symbol_source": "HGNC", "biotype": "protein_coding", "variant_allele": "G"}], "regulatory_feature_consequences": [{"biotype": "enhancer", "regulatory_feature_id": "ENSR00000358271", "variant_allele": "G", "impact": "MODIFIER", "consequence_terms": ["regulatory_region_variant"]}], "input": "1 55063581 55063582 T G . . .", "assembly_name": "GRCh38", "start": 55063581, "seq_region_name": "1", "most_severe_consequence": "missense_variant", "strand": 1, "id": "55063582", "allele_string": "T/G"}, {"allele_string": "A/G", "most_severe_consequence": "3_prime_UTR_variant", "strand": 1, "id": "55063592", "seq_region_name": "1", "end": 55063591, "transcript_consequences": [{"hgnc_id": "HGNC:12623", "biotype": "protein_coding", "variant_allele": "G", "gene_symbol_source": "HGNC", "canonical": 1, "distance": 2768, "gene_symbol": "USP24", "transcript_id": "ENST00000294383", "gene_id": "ENSG00000162402", "strand": -1, "impact": "MODIFIER", "consequence_terms": ["downstream_gene_variant"]}, {"cdna_end": 2376, "gene_symbol_source": "HGNC", "canonical": 1, "hgnc_id": "HGNC:20001", "variant_allele": "G", "biotype": "protein_coding", "consequence_terms": ["3_prime_UTR_variant"], "cdna_start": 2376, "gene_id": "ENSG00000169174", "strand": 1, "impact": "MODIFIER", "gene_symbol": "PCSK9", "transcript_id": "ENST00000302118"}], "regulatory_feature_consequences": [{"consequence_terms": ["regulatory_region_variant"], "impact": "MODIFIER", "regulatory_feature_id": "ENSR00000358271", "variant_allele": "G", "biotype": "enhancer"}], "assembly_name": "GRCh38", "input": "1 55063591 55063592 A G . . .", "start": 55063591}]
+[
+    {
+        "seq_region_name": "1",
+        "end": 55039803,
+        "input": "1 55039803 55039804 C T . . .",
+        "assembly_name": "GRCh38",
+        "start": 55039803,
+        "allele_string": "C/T",
+        "most_severe_consequence": "missense_variant",
+        "strand": 1,
+        "id": "55039804",
+        "consequence_terms": {
+            "hgnc_id": "HGNC:20001",
+            "biotype": "protein_coding",
+            "variant_allele": "T",
+            "cdna_end": 256,
+            "canonical": 1,
+            "gene_symbol_source": "HGNC",
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118",
+            "impact": "MODIFIER",
+            "gene_id": "ENSG00000169174",
+            "strand": 1,
+            "consequence_terms": "5_prime_UTR_variant",
+            "cdna_start": 256
+        }
+    },
+    {
+        "colocated_variants": [
+            {
+                "id": "COSV56161093",
+                "seq_region_name": "1",
+                "phenotype_or_disease": 1,
+                "somatic": 1,
+                "strand": 1,
+                "start": 55039838,
+                "allele_string": "COSMIC_MUTATION",
+                "var_synonyms": {
+                    "COSMIC": [
+                        "COSM6420513"
+                    ]
+                },
+                "end": 55039838
+            }
+        ],
+        "seq_region_name": "1",
+        "end": 55039838,
+        "assembly_name": "GRCh38",
+        "input": "1 55039838 55039839 T G . . .",
+        "start": 55039838,
+        "regulatory_feature_consequences": [
+            {
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "impact": "MODIFIER",
+                "variant_allele": "G",
+                "regulatory_feature_id": "ENSR00001299574",
+                "biotype": "promoter"
+            }
+        ],
+        "allele_string": "T/G",
+        "id": "55039839",
+        "strand": 1,
+        "most_severe_consequence": "start_lost",
+        "consequence_terms": {
+            "canonical": 1,
+            "hgnc_id": "HGNC:20001",
+            "gene_id": "ENSG00000169174",
+            "protein_end": 1,
+            "cds_end": 1,
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118",
+            "cdna_end": 291,
+            "polyphen_score": 0.069,
+            "gene_symbol_source": "HGNC",
+            "sift_score": 0,
+            "biotype": "protein_coding",
+            "variant_allele": "G",
+            "polyphen_prediction": "benign",
+            "cds_start": 1,
+            "amino_acids": "L/V",
+            "consequence_terms": "start_lost",
+            "cdna_start": 291,
+            "impact": "HIGH",
+            "codons": "Ttg/Gtg",
+            "strand": 1,
+            "sift_prediction": "deleterious_low_confidence",
+            "protein_start": 1
+        }
+    },
+    {
+        "seq_region_name": "1",
+        "end": 55039872,
+        "regulatory_feature_consequences": [
+            {
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "impact": "MODIFIER",
+                "biotype": "promoter",
+                "regulatory_feature_id": "ENSR00001299574",
+                "variant_allele": "T"
+            }
+        ],
+        "start": 55039872,
+        "input": "1 55039872 55039873 G T . . .",
+        "assembly_name": "GRCh38",
+        "allele_string": "G/T",
+        "most_severe_consequence": "missense_variant",
+        "strand": 1,
+        "id": "55039873",
+        "consequence_terms": {
+            "sift_prediction": "tolerated",
+            "protein_start": 12,
+            "polyphen_prediction": "benign",
+            "cds_start": 35,
+            "amino_acids": "R/L",
+            "consequence_terms": "missense_variant",
+            "cdna_start": 325,
+            "impact": "MODERATE",
+            "codons": "cGg/cTg",
+            "strand": 1,
+            "sift_score": 0.76,
+            "variant_allele": "T",
+            "biotype": "protein_coding",
+            "polyphen_score": 0,
+            "cdna_end": 325,
+            "gene_symbol_source": "HGNC",
+            "cds_end": 35,
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118",
+            "protein_end": 12,
+            "gene_id": "ENSG00000169174",
+            "hgnc_id": "HGNC:20001",
+            "canonical": 1
+        }
+    },
+    {
+        "end": 55039901,
+        "input": "1 55039901 55039902 T C . . .",
+        "assembly_name": "GRCh38",
+        "start": 55039901,
+        "regulatory_feature_consequences": [
+            {
+                "impact": "MODIFIER",
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "variant_allele": "C",
+                "regulatory_feature_id": "ENSR00001299574",
+                "biotype": "promoter"
+            }
+        ],
+        "seq_region_name": "1",
+        "id": "55039902",
+        "strand": 1,
+        "most_severe_consequence": "missense_variant",
+        "allele_string": "T/C",
+        "consequence_terms": {
+            "cds_start": 64,
+            "amino_acids": "F/L",
+            "cdna_start": 354,
+            "consequence_terms": "missense_variant",
+            "impact": "MODERATE",
+            "codons": "Ttc/Ctc",
+            "strand": 1,
+            "protein_start": 22,
+            "cdna_end": 354,
+            "gene_symbol_source": "HGNC",
+            "variant_allele": "C",
+            "biotype": "protein_coding",
+            "protein_end": 22,
+            "gene_id": "ENSG00000169174",
+            "cds_end": 64,
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118",
+            "canonical": 1,
+            "hgnc_id": "HGNC:20001"
+        }
+    },
+    {
+        "allele_string": "C/G",
+        "id": "55039926",
+        "strand": 1,
+        "most_severe_consequence": "missense_variant",
+        "seq_region_name": "1",
+        "assembly_name": "GRCh38",
+        "input": "1 55039925 55039926 C G . . .",
+        "start": 55039925,
+        "regulatory_feature_consequences": [
+            {
+                "variant_allele": "G",
+                "regulatory_feature_id": "ENSR00001299574",
+                "biotype": "promoter",
+                "impact": "MODIFIER",
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ]
+            }
+        ],
+        "end": 55039925,
+        "consequence_terms": {
+            "amino_acids": "P/A",
+            "cds_start": 88,
+            "codons": "Ccg/Gcg",
+            "impact": "MODERATE",
+            "strand": 1,
+            "cdna_start": 378,
+            "consequence_terms": "missense_variant",
+            "protein_start": 30,
+            "cdna_end": 378,
+            "gene_symbol_source": "HGNC",
+            "biotype": "protein_coding",
+            "variant_allele": "G",
+            "gene_id": "ENSG00000169174",
+            "protein_end": 30,
+            "gene_symbol": "PCSK9",
+            "cds_end": 88,
+            "transcript_id": "ENST00000302118",
+            "canonical": 1,
+            "hgnc_id": "HGNC:20001"
+        }
+    },
+    {
+        "allele_string": "C/A",
+        "id": "55040085",
+        "strand": 1,
+        "most_severe_consequence": "intron_variant",
+        "seq_region_name": "1",
+        "start": 55040084,
+        "input": "1 55040084 55040085 C A . . .",
+        "assembly_name": "GRCh38",
+        "regulatory_feature_consequences": [
+            {
+                "regulatory_feature_id": "ENSR00001299574",
+                "variant_allele": "A",
+                "biotype": "promoter",
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "impact": "MODIFIER"
+            }
+        ],
+        "end": 55040084,
+        "consequence_terms": {
+            "hgnc_id": "HGNC:20001",
+            "variant_allele": "A",
+            "biotype": "protein_coding",
+            "gene_symbol_source": "HGNC",
+            "canonical": 1,
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118",
+            "strand": 1,
+            "gene_id": "ENSG00000169174",
+            "impact": "MODIFIER",
+            "consequence_terms": "intron_variant"
+        }
+    },
+    {
+        "allele_string": "C/T",
+        "strand": 1,
+        "most_severe_consequence": "synonymous_variant",
+        "id": "55063570",
+        "seq_region_name": "1",
+        "regulatory_feature_consequences": [
+            {
+                "biotype": "enhancer",
+                "regulatory_feature_id": "ENSR00000358271",
+                "variant_allele": "T",
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "impact": "MODIFIER"
+            }
+        ],
+        "start": 55063569,
+        "input": "1 55063569 55063570 C T . . .",
+        "assembly_name": "GRCh38",
+        "end": 55063569,
+        "consequence_terms": {
+            "hgnc_id": "HGNC:20001",
+            "canonical": 1,
+            "gene_symbol": "PCSK9",
+            "cds_end": 2064,
+            "transcript_id": "ENST00000302118",
+            "protein_end": 688,
+            "gene_id": "ENSG00000169174",
+            "variant_allele": "T",
+            "biotype": "protein_coding",
+            "cdna_end": 2354,
+            "gene_symbol_source": "HGNC",
+            "protein_start": 688,
+            "cds_start": 2064,
+            "amino_acids": "S",
+            "cdna_start": 2354,
+            "consequence_terms": "synonymous_variant",
+            "codons": "tcC/tcT",
+            "strand": 1,
+            "impact": "LOW"
+        }
+    },
+    {
+        "end": 55063581,
+        "regulatory_feature_consequences": [
+            {
+                "biotype": "enhancer",
+                "regulatory_feature_id": "ENSR00000358271",
+                "variant_allele": "G",
+                "impact": "MODIFIER",
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ]
+            }
+        ],
+        "input": "1 55063581 55063582 T G . . .",
+        "assembly_name": "GRCh38",
+        "start": 55063581,
+        "seq_region_name": "1",
+        "most_severe_consequence": "missense_variant",
+        "strand": 1,
+        "id": "55063582",
+        "allele_string": "T/G",
+        "consequence_terms": {
+            "gene_id": "ENSG00000169174",
+            "protein_end": 692,
+            "gene_symbol": "PCSK9",
+            "cds_end": 2076,
+            "transcript_id": "ENST00000302118",
+            "canonical": 1,
+            "hgnc_id": "HGNC:20001",
+            "cds_start": 2076,
+            "amino_acids": "H/Q",
+            "cdna_start": 2366,
+            "consequence_terms": "missense_variant",
+            "codons": "caT/caG",
+            "strand": 1,
+            "impact": "MODERATE",
+            "protein_start": 692,
+            "cdna_end": 2366,
+            "gene_symbol_source": "HGNC",
+            "biotype": "protein_coding",
+            "variant_allele": "G"
+        }
+    },
+    {
+        "allele_string": "A/G",
+        "most_severe_consequence": "3_prime_UTR_variant",
+        "strand": 1,
+        "id": "55063592",
+        "seq_region_name": "1",
+        "end": 55063591,
+        "regulatory_feature_consequences": [
+            {
+                "consequence_terms": [
+                    "regulatory_region_variant"
+                ],
+                "impact": "MODIFIER",
+                "regulatory_feature_id": "ENSR00000358271",
+                "variant_allele": "G",
+                "biotype": "enhancer"
+            }
+        ],
+        "assembly_name": "GRCh38",
+        "input": "1 55063591 55063592 A G . . .",
+        "start": 55063591,
+        "consequence_terms": {
+            "cdna_end": 2376,
+            "gene_symbol_source": "HGNC",
+            "canonical": 1,
+            "hgnc_id": "HGNC:20001",
+            "variant_allele": "G",
+            "biotype": "protein_coding",
+            "consequence_terms": "3_prime_UTR_variant",
+            "cdna_start": 2376,
+            "gene_id": "ENSG00000169174",
+            "strand": 1,
+            "impact": "MODIFIER",
+            "gene_symbol": "PCSK9",
+            "transcript_id": "ENST00000302118"
+        }
+    }
+]
