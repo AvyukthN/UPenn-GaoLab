@@ -24,6 +24,7 @@ if __name__ == '__main__':
 
 	full_VEP_jsonfp = f'./extracted_consequences/{extract_folder}/{out_json_fp}'
 
+	print("GETTING RESPONSE DATA")
 	get_response_data(list(sys.argv), extract_folder)
 	if param != "":
 		intermediate_preprocessor(param, full_VEP_jsonfp) 

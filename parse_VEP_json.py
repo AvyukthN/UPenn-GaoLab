@@ -70,7 +70,13 @@ def tablize_response(SNP_summary_df: dict, consequences_dict: dict, extract_name
 
 	final_txt = ""
 	for seqid in consequences_dict:
+		newseqid = seqid
+		while "/" in newseqid:
+			newseqid.replace("/", "")
+		seqid = newseqid
 		os.system(f"mkdir ./extracted_consequences/{extract_name}/{seqid}")
+		# os.system(f"touch ./extracted_consequences/{extract_name}/{seqid}/reg_cons.json")
+		# os.system(f"touch ./extracted_consequences/{extract_name}/{seqid}/transcript_cons.json")
 
 		cdict_list = consequences_dict[seqid]['regulatory_feature_consequences']
 		cdict_json = json.dumps(cdict_list)

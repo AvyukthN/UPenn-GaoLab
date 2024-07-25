@@ -36,13 +36,17 @@ def transformer(fp: str):
 		for i in range(len(inter)):
 			inter[i]["consequence_terms"] = inter[i]["consequence_terms"][0]
 
+		if len(inter) == 1:
+			transformed_consequence_dict["transcript_consequences"] = [inter[0]]
+			transformed_data.append(transformed_consequence_dict)
+			continue
+
 		# Define the arbitrary values for consequence terms
-		
 		consequence_values = {}
 		truncation = "transcript_ablation frame_shift start_lost stop_gained stop_lost feature_elongation feature_truncation"
 		missense = "inframe_insertion inframe_deletion missense_variant protein_altering_variant incomplete_terminal_codon_variant coding_sequence_variant"
 		splice = "splice_acceptor_variant splice_donor_variant splice_donor_5th_base_variant splice_region_variant splice_donor_region_variant splice_polypyrimidine_tract_variant"
-		regulatory = "NMD_transcript_variant 5_prime_UTR_variant 3_prime_UTR_variant transcript_amplification non_coding_transcript_exon_variant intron_variant non_coding_transcript_variant"
+		regulatory = "NMD_transcript_variant 5_prime_UTR_variant 3_prime_UTR_variant transcript_amplification non_coding_transcript_exon_variant intron_variant non_coding_transcript_variant downstream_gene_variant"
 		lowest = "start_retained_variant stop_retained_variant synonymous_variant"
 
 		for _ in truncation.split(" "):
@@ -56,17 +60,65 @@ def transformer(fp: str):
 		for _ in lowest.split(" "):
 			consequence_values[_] = 1
 
-		# sorted_list = sorted(inter, key=cmp_to_key(compare_consequences))
+		term_vals = []
+		newInter = []
+		for i in range(len(inter)):
+			if type(inter[i]["consequence_terms"]) == list:
+				lofl = [[term, consequence_values[term]] for term in inter["consequence_terms"]]
+				max_term = max(lofl, key = lambda x: x[1])[0]
+			elif type(inter[i]["consequence_terms"]) == str:
+				max_term = inter[i]["consequence_terms"]
+			term_vals.append(consequence_values[max_term])
+			newInter.append([inter[i], consequence_values[max_term]])
+	
+		max_term_val = max(term_vals)
+		newInter.sort(key=lambda x: x[1])
+		final_consequences = []
+		for i in range(len(newInter)):
+			if newInter[i][1] == max_term_val:
+				final_consequences.append(newInter[i][0])
+
+		transformed_consequence_dict["transcript_consequences"] = final_consequences
+		transformed_data.append(transformed_consequence_dict)
+
+		'''
+		sorted_list = sorted(inter, key=cmp_to_key(compare_consequences))
 		sorted_list = sorted(inter, key=cmp_to_key(lambda x, y: compare_consequences(x, y, consequence_values)))
 
-		transformed_consequence_dict["consequence_terms"] = sorted_list[-1]
+		transformed_consequence_dict["transcript_consequences"] = [sorted_list[-1]]
 		transformed_data.append(transformed_consequence_dict)
+		'''
 
 	return transformed_data
 
+def data2table(tdata):
+	final_str = ""
+	for snp in tdata:
+		curr_str = ""
+		for consequence in snp["transcript_consequences"]:
+			snp_headers = list(snp.keys())
+			snp_headers.sort()
+			for header in snp_headers:
+				if header != "transcript_consequences":
+					curr_str += str(snp[header]) + "\t"
+			cons_headers = list(consequence.keys())
+			cons_headers.sort()
+			for header in cons_headers:
+				curr_str += str(consequence[header]) + "\t"
+		final_str += curr_str + "\n"
+	
+	return final_str
+
 if __name__ == '__main__':
-	fp = "./extracted_consequences/canonical_demo/VEP_canonical_data.json"
+	fp = "./extracted_consequences/canonical_only/VEP_param_test.json"
+
 
 	tdata = transformer(fp)
+	table = data2table(tdata)
+
+	with open("final_table.tsv", "w") as f:
+		f.write(table)
+	'''
 	with open(fp, 'w') as f:
 		json.dump(tdata, f, indent=4)
+	'''
