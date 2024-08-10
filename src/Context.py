@@ -19,11 +19,15 @@ class pipelineContext:
                 self.pipeline.setExtractStrategy(CSVExtractStrategy())
             case "tsv":
                 self.pipeline.setExtractStrategy(TSVExtractStrategy())
+            case _:
+                self.pipeline.setExtractStrategy(TSVExtractStrategy())
 
         match dest_ext:
             case "csv":
                 self.pipeline.setLoadStrategy(CSVLoadStrategy())
             case "tsv":
+                self.pipeline.setLoadStrategy(TSVLoadStrategy())
+            case _:
                 self.pipeline.setLoadStrategy(TSVLoadStrategy())
 
         self.pipeline.setTransformStrategy(UniversalTransformStrategy())

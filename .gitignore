@@ -12,3 +12,5 @@
 !spec/*.tsv
 *.env
 !spec/*.env
+lib/ensembl-vep/
+lib/ensembl-vep-release-112/

@@ -13,7 +13,17 @@ class SSETL():
     def setLoadStrategy(self, load_strategy: LoadStrategy):
         self.load_strategy = load_strategy
 
+    def strategyNotSet(self):
+        match None:
+            case self.extract_strategy:
+                raise Exception("ExtractStrategy NOT SET")
+            case self.transform_strategy:
+                raise Exception("TransformStrategy NOT SET")
+            case self.load_strategy:
+                raise Exception("LoadStrategy NOT SET")
+
     def executePipeline(self, source, destination):
+        self.strategyNotSet()
         extracted_data = self.extract_strategy.extract(source)
         transformed_data = self.transform_strategy.transform(extracted_data)
         self.load_strategy.load(transformed_data, destination)

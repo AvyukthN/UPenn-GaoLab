@@ -1,0 +1,1 @@
+./vep -i ../data/extracts/2024-08-07-17:18:11.649741_extract/geneVCFs/BRCA2.vcf -o ../data/testVCFout.txt --cache
