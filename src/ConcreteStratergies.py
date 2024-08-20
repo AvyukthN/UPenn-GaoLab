@@ -3,10 +3,17 @@ import pandas as pd
 from datetime import datetime
 from tqdm import tqdm
 import os
+import numpy as np
 from helper_functions.geneNameSearch import geneNameToEnsemblID
 from helper_functions.geneNameSearch import makeBedFile 
 from helper_functions.runMutator import runMutator
 from helper_functions.bedtoolWrapper import getFastaFromBED
+from helper_functions.filterTranscripts import filterFunctionalBiotypes
+from helper_functions.filterTranscripts import filterTopConsequences
+from helper_functions.filterTranscripts import filterCanonicalTranscripts
+from helper_functions.topCatCounter import topCatCounter
+import matplotlib.pyplot as plt
+import time
 
 class CSVExtractStrategy(ExtractStrategy):
     def extract(self, source):
@@ -50,6 +57,9 @@ class UniversalTransformStrategy(TransformStrategy):
         os.mkdir(f"{extract_folder}geneFASTAs/")
         os.mkdir(f"{extract_folder}geneVCFs/")
         os.mkdir(f"{extract_folder}geneFigures/")
+        os.mkdir(f"{extract_folder}geneTrimerVecs/")
+        os.mkdir(f"{extract_folder}finalTranscripts/")
+        os.mkdir(f"{extract_folder}curatedTranscripts/")
 
         for i in tqdm(range(len(gene_names))):
             name = gene_names[i]
@@ -65,12 +75,14 @@ class UniversalTransformStrategy(TransformStrategy):
             #             CODE BLOCK FOR VEP ANNOTATION             #
             ##########################################################
 
-            vep_results_fname = f"{extract_folder}{name}_annotated.tsv"
+            vep_results_fname = f"../data/VEP_annotations/{name}.tsv"
 
             df = pd.read_csv(vep_results_fname, sep="\t")
+            df = filterCanonicalTranscripts(df)
             df = filterFunctionalBiotypes(df)
+            self.dataSaver(f"curatedTranscripts/{name}_filtered_transcript_annotations.tsv", df)
             df = filterTopConsequences(df)
-            self.dataSaver("filtered_transcript_annotations.tsv", df)
+            self.dataSaver(f"finalTranscripts/{name}_filtered_transcript_annotations.tsv", df)
 
             out = topCatCounter(df, fasta_fp)
 
@@ -82,6 +94,7 @@ class UniversalTransformStrategy(TransformStrategy):
             plt.ylabel('Frequency')
             ax.legend(["C Trinucleotide Frequencies", "T Trinucleotide Frequencies"], fontsize = 14)
             self.dataSaver(f"geneFigures/{name}_TopCategory_Trimer_Frequency.png", plt)
+            self.dataSaver(f"geneTrimerVecs/{name}_TopCategory_Trimer_Frequency_Vec.npy", counts)
 
     def dataSaver(self, filename: str, data):
         filepath = f"{self.extract_folder}{filename}"
@@ -93,6 +106,8 @@ class UniversalTransformStrategy(TransformStrategy):
                     f.write(data)
             case "png":
                 data.savefig(filepath)
+            case "npy":
+                np.save(filepath, data)
             case _:
                 raise Exception(f"Unsupported File Type for \"{filename}\"")
 
