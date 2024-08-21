@@ -8,6 +8,7 @@ from helper_functions.geneNameSearch import geneNameToEnsemblID
 from helper_functions.geneNameSearch import makeBedFile 
 from helper_functions.runMutator import runMutator
 from helper_functions.bedtoolWrapper import getFastaFromBED
+from helper_functions.filterTranscripts import filterGeneOfInterest
 from helper_functions.filterTranscripts import filterFunctionalBiotypes
 from helper_functions.filterTranscripts import filterTopConsequences
 from helper_functions.filterTranscripts import filterCanonicalTranscripts
@@ -60,6 +61,7 @@ class UniversalTransformStrategy(TransformStrategy):
         os.mkdir(f"{extract_folder}geneTrimerVecs/")
         os.mkdir(f"{extract_folder}finalTranscripts/")
         os.mkdir(f"{extract_folder}curatedTranscripts/")
+        os.mkdir(f"{extract_folder}originalTranscripts/")
 
         for i in tqdm(range(len(gene_names))):
             name = gene_names[i]
@@ -78,11 +80,13 @@ class UniversalTransformStrategy(TransformStrategy):
             vep_results_fname = f"../data/VEP_annotations/{name}.tsv"
 
             df = pd.read_csv(vep_results_fname, sep="\t")
+            self.dataSaver(f"originalTranscripts/{name}_filter=NONE.tsv", df)
+            df = filterGeneOfInterest(df, name)
             df = filterCanonicalTranscripts(df)
             df = filterFunctionalBiotypes(df)
-            self.dataSaver(f"curatedTranscripts/{name}_filtered_transcript_annotations.tsv", df)
+            self.dataSaver(f"curatedTranscripts/{name}_filter=biotype,canonical,GOI.tsv", df)
             df = filterTopConsequences(df)
-            self.dataSaver(f"finalTranscripts/{name}_filtered_transcript_annotations.tsv", df)
+            self.dataSaver(f"finalTranscripts/{name}_filter=ALL.tsv", df)
 
             out = topCatCounter(df, fasta_fp)
 

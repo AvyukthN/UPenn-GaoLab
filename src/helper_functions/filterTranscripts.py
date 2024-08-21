@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-def getFunctionalBiotypes():
-    with open("../data/classification_data/functional_biotypes.txt", "r") as f:
+def getFunctionalBiotypes(filepath: str):
+    with open(filepath, "r") as f:
         fbiotypes = f.read().split("\n")
         return {bt: 1 for bt in fbiotypes}
 
@@ -21,12 +21,15 @@ def getRank(consequence_term: str, rank_hash: dict):
     else:
         return min(list(map(lambda x: rank_hash[x], consequence_term.split(","))))
 
+def filterGeneOfInterest(df: pd.DataFrame, gene_name: str):
+    return df[df["SYMBOL"] == gene_name]
+
 def filterCanonicalTranscripts(df: pd.DataFrame):
     return df[df["CANONICAL"] == "YES"]
 
-def filterFunctionalBiotypes(df: pd.DataFrame):
+def filterFunctionalBiotypes(df: pd.DataFrame, filepath="../data/classification_data/functional_biotypes.txt"):
     biotypes = list(df["BIOTYPE"])
-    functional_biotypes = getFunctionalBiotypes()
+    functional_biotypes = getFunctionalBiotypes(filepath)
 
     checked_biotypes = map(lambda x: x in functional_biotypes, biotypes)
     checked_biotypes = list(map(int, checked_biotypes))
