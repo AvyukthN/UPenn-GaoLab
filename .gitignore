@@ -10,8 +10,6 @@
 !spec/*.fa
 *.tsv
 # !spec/*.tsv
-!/data/VEP_annotations/BRCA2.tsv
-!/data/VEP_annotations/BRCA1.tsv
 !/data/VEP_annotations/TP53.tsv
 *.env
 !spec/*.env
